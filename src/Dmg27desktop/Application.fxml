@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="563.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dmg27desktop.Controller">
+	<children>
+		<AnchorPane layoutX="-86.0" layoutY="-97.0" prefHeight="200.0" prefWidth="200.0" />
+		<Rectangle arcHeight="5.0" arcWidth="5.0" height="50.0" layoutX="53.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+		<Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4d5d7" height="85.0" layoutX="53.0" layoutY="341.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+		<Rectangle arcHeight="5.0" arcWidth="5.0" fill="#808080" height="108.0" layoutX="53.0" layoutY="109.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+		<Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a16403" height="50.0" layoutX="53.0" layoutY="217.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+		<Rectangle arcHeight="5.0" arcWidth="5.0" fill="#97a0a8" height="50.0" layoutX="53.0" layoutY="426.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+		<Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a16403" height="50.0" layoutX="53.0" layoutY="476.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+		<ComboBox fx:id="pavType" layoutX="463.0" layoutY="109.0" prefHeight="25.0" prefWidth="139.0" promptText="Select ..." />
+		<ComboBox fx:id="cbrDrop" layoutX="463.0" layoutY="269.0" prefHeight="25.0" prefWidth="139.0" promptText="Select ..." />
+		<ComboBox fx:id="kDrop" layoutX="463.0" layoutY="348.0" prefHeight="25.0" prefWidth="139.0" promptText="Select ..." />
+		<ComboBox fx:id="materialDrop" layoutX="463.0" layoutY="309.0" prefHeight="25.0" prefWidth="139.0" promptText="Select ..." />
+		<ComboBox fx:id="concreteDrop" layoutX="463.0" layoutY="388.0" prefHeight="25.0" prefWidth="139.0" promptText="Select ..." />
+		<ComboBox fx:id="gearDrop" layoutX="463.0" layoutY="188.0" prefHeight="25.0" prefWidth="139.0" promptText="Select ..." />
+		<ComboBox fx:id="coveragesDrop" layoutX="463.0" layoutY="229.0" prefHeight="25.0" prefWidth="139.0" promptText="Select ..." />
+		<Button fx:id="calculate" layoutX="372.0" layoutY="461.0" mnemonicParsing="false" onAction="#calculate" text="Calculate">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</Button>
+		<Button fx:id="reset" layoutX="501.0" layoutY="461.0" mnemonicParsing="false" onAction="#reset" text="Reset">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</Button>
+		<Label layoutX="108.0" layoutY="30.0" text="Flexible Solution">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<TextField fx:id="acnDesign" layoutX="463.0" layoutY="147.0" prefHeight="25.0" prefWidth="139.0" promptText="Enter value" />
+		<TextArea fx:id="surfacesoln" blendMode="SRC_ATOP" editable="false" layoutX="130.0" layoutY="70.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="true" prefHeight="30.0" prefWidth="50.0">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</TextArea>
+		<TextArea fx:id="bindersoln" blendMode="SRC_ATOP" layoutX="125.0" layoutY="148.0" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="true" prefHeight="30.0" prefWidth="60.0">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</TextArea>
+		<TextArea fx:id="gsbflexsoln" blendMode="SRC_ATOP" layoutX="130.0" layoutY="227.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="true" prefHeight="30.0" prefWidth="50.0">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</TextArea>
+		<TextArea fx:id="gsbrigidsoln" blendMode="SRC_ATOP" layoutX="128.0" layoutY="484.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="true" prefHeight="30.0" prefWidth="50.0">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</TextArea>
+		<TextArea fx:id="dlcsoln" blendMode="SRC_ATOP" layoutX="128.0" layoutY="433.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="true" prefHeight="30.0" prefWidth="50.0">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</TextArea>
+		<TextArea fx:id="pqsoln" blendMode="SRC_ATOP" layoutX="128.0" layoutY="366.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="true" prefHeight="30.0" prefWidth="50.0">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</TextArea>
+		<Label layoutX="329.0" layoutY="23.0" prefHeight="75.0" prefWidth="323.0" text="DMG 27 Pavement Calculator" textAlignment="JUSTIFY" textFill="#868484">
+			<font>
+				<Font name="System Bold" size="20.0" />
+			</font>
+		</Label>
+
+		<Label layoutX="329.0" layoutY="112.0" text="Pavement Type">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="329.0" layoutY="150.0" text="Design ACN">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="329.0" layoutY="191.0" text="Gear Type">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="329.0" layoutY="232.0" text="Coverages">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="329.0" layoutY="271.0" text="CBR Value">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="329.0" layoutY="312.0" text="Base Material">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="329.0" layoutY="351.0" text="'K' Value">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="329.0" layoutY="391.0" text="Concrete Strength">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<Label layoutX="616.0" layoutY="275.0" text="Fleixible Only" textFill="#a4a4a4">
+			<font>
+				<Font name="System Italic" size="9.0" />
+			</font>
+		</Label>
+		<Label layoutX="616.0" layoutY="315.0" text="Fleixible Only" textFill="#a4a4a4">
+			<font>
+				<Font name="System Italic" size="9.0" />
+			</font>
+		</Label>
+		<Label layoutX="616.0" layoutY="393.0" text="Rigid Only" textFill="#a4a4a4">
+			<font>
+				<Font name="System Italic" size="9.0" />
+			</font>
+		</Label>
+		<Label layoutX="616.0" layoutY="354.0" text="Rigid Only" textFill="#a4a4a4">
+			<font>
+				<Font name="System Italic" size="9.0" />
+			</font>
+		</Label>
+      <Label layoutX="115.0" layoutY="309.0" text="Rigid Solution">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+	</children>
+</AnchorPane>
